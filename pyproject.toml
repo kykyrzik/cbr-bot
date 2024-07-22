@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "test-project"
+version = "0.1.0"
+description = ""
+authors = ["Nick Ivanukov <ivanukov78@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.11.0"
+
+[tool.mypy]
+ disable_error_code = ["union-attr", "var-annotated"]
+warn_unused_ignores = false
+follow_imports_for_stubs = true
+pretty = true
+show_absolute_path = true
+hide_error_codes = false
+show_error_context = true
+strict = true
+warn_unreachable = true
+warn_no_return = true
+
+[tool.poetry.dependencies]
+python = "^3.12"
+aiohttp = "^3.9.5"
+redis = "^5.0.7"
+fast-depends = "^2.4.6"
+adaptix = "^3.0.0b7"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
